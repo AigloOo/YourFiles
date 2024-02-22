@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template Library</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="public/css/styles.css">
+    <title>Partage de Templates de Dossier et Fichier</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Template Library</h1>
+        <div class="container">
+            <h1>Partage de Templates de Dossier et Fichier</h1>
+        </div>
     </header>
-    <main>
-        <section id="templates">
-            <!-- Les templates seront ajoutés ici -->
+    <main class="container">
+        <section id="template-form">
+            <h2>Ajouter Votre Template</h2>
+            <form id="template-upload-form">
+                <div class="form-group">
+                    <label for="template-name">Nom du Dossier:</label>
+                    <input type="text" id="template-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="template-description">Description:</label>
+                    <textarea id="template-description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="template-file">Fichier Zip:</label>
+                    <input type="file" id="template-file" accept=".zip" required>
+                </div>
+                <button type="submit">Ajouter Template</button>
+            </form>
         </section>
-        <button id="toggleForm" class="add-button"><i class="fas fa-plus"></i> Ajouter un Template</button>
-        <section id="addTemplate" class="hidden">
-            <div class="form-container">
-                <h2>Ajouter un Template</h2>
-                <form id="templateForm">
-                    <label for="templateName">Nom du Template :</label>
-                    <input type="text" id="templateName" required>
-                    <label for="templateCode">Code du Template :</label>
-                    <textarea id="templateCode" rows="10" required></textarea>
-                    <button type="submit"><i class="fas fa-plus-circle"></i> Ajouter</button>
-                </form>
-            </div>
+        <section id="template-list">
+            <h2>Templates Ajoutés</h2>
+            <ul id="templates"></ul>
         </section>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+
     <script src="script.js"></script>
 </body>
 

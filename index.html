@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Template Library</h1>
+    </header>
+    <main>
+        <section id="templates">
+            <!-- Les templates seront ajoutés ici -->
+        </section>
+        <button id="toggleForm" class="add-button"><i class="fas fa-plus"></i> Ajouter un Template</button>
+        <section id="addTemplate" class="hidden">
+            <div class="form-container">
+                <h2>Ajouter un Template</h2>
+                <form id="templateForm">
+                    <label for="templateName">Nom du Template :</label>
+                    <input type="text" id="templateName" required>
+                    <label for="templateCode">Code du Template :</label>
+                    <textarea id="templateCode" rows="10" required></textarea>
+                    <button type="submit"><i class="fas fa-plus-circle"></i> Ajouter</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
